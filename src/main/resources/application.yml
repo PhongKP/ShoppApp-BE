@@ -26,7 +26,7 @@ logging:
     root: info
 jwt:
   expiration: 2592000 #Giá trị expiration <=> 30 ngày (30 * 24 * 60 * 60 giây)
-  secretKey: 2YPhJUryN2Rm6rxeTYcIQSR4/UuM39MGKU0R4ilcFOo=
+  secretKey: ${JWT_SECRET_KEY}
 server:
   port: 8088
 api:
@@ -34,4 +34,8 @@ api:
 # Chỉ định thư mục lưu ảnh tạm thời trên local
 upload:
   path: E:/SpringProject/shopapp-BE/shopapp/src/main/resources/uploads
+cloudinary:
+  name: ${api_cloudinary_name}
+  api-key: ${api_cloudinary_key}
+  api-secret: ${api_cloudinary_secret}
 
